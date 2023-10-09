@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import "./App.css";
+import LoginContext from "./Context/LoginContext";
+import LoginState from "./Context/LoginState";
+import Welcome from "./Componenst/Welcome";
+import Login from "./Componenst/Login/Login";
+import Header from "./Componenst/Header/Header";
 
 function App() {
+  const { state } = useContext(LoginContext);
+  // console.log(state);
+  // console.log("Authentication Status:", state.isAuthentication);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LoginState>
+        <Header />
+
+        {state.isAuthentication ? (
+          alert("You Have Login Successfully")
+        ) : (
+          <Login />
+        )}
+      </LoginState>
     </div>
   );
 }

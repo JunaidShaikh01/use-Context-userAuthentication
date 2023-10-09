@@ -1,0 +1,28 @@
+.headerSection {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(164, 164, 236);
+  padding: 0 2rem 0 2rem;
+}
+.LoginButtonSection button {
+  background: rgb(103, 103, 207);
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: aliceblue;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.LoginButtonSection button:hover {
+  background: rgb(65, 65, 194);
+  color: white;
+}
+.loginNameSection h3 {
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

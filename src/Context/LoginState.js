@@ -5,13 +5,11 @@ function authReducer(state, action) {
   // console.log("Reducer Action:", action);
 
   if (action.type === "LOGIN") {
-    const newState = {
+    return {
       ...state,
       isAuthentication: true,
       user: action.payload,
     };
-    // console.log("New State ", newState);
-    return newState;
   }
 
   if (action.type === "LOGOUT") {
@@ -21,7 +19,7 @@ function authReducer(state, action) {
       user: "",
     };
   } else {
-    return state;
+    return initialState;
   }
 }
 const initialState = {

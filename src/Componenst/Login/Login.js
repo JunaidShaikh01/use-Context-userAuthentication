@@ -13,11 +13,12 @@ export default function Login() {
     setFormData({ ...formData, [name]: value });
   }
   function loginHandler() {
-    // console.log("Submitted");
-    // console.log(formData.username);
+    // console.log("Button is Clicked");
+    // console.log("formData.Username", formData.username);
+    // console.log("formData.Password", formData.password);
     if (formData.username === "Junaid" && formData.password === "Pass@123") {
       dispatch({ type: "LOGIN", payload: formData.username });
-      // console.log("Write Answer");
+      // console.log("Write Username and PAssword");
     } else {
       alert("Incorrect username or password");
     }
